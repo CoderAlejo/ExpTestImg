@@ -1,0 +1,22 @@
+{
+  "name": "@ExpTestImg-example/bundled",
+  "version": "0.0.0",
+  "dependencies": {
+    "@ExpTestImg/core": "workspace:*",
+    "@ExpTestImg/dashboard": "workspace:*",
+    "@ExpTestImg/google-drive": "workspace:*",
+    "@ExpTestImg/instagram": "workspace:*",
+    "@ExpTestImg/tus": "workspace:*",
+    "@ExpTestImg/url": "workspace:*",
+    "@ExpTestImg/webcam": "workspace:*"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html"
+  }
+}
