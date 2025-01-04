@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://releases.transloadit.com/ExpTestImg/v3.20.0/ExpTestImg.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <noscript>You need JavaScript enabled for this example to work.</noscript>
+    <button id="ExpTestImgModalOpener">Open Modal</button>
+
+    <script type="module">
+      import {
+        ExpTestImg,
+        Dashboard,
+        Webcam,
+        Tus,
+      } from 'https://releases.transloadit.com/ExpTestImg/v3.20.0/ExpTestImg.min.mjs'
+
+      const ExpTestImg = new ExpTestImg({ debug: true, autoProceed: false })
+        .use(Dashboard, { trigger: '#ExpTestImgModalOpener' })
+        .use(Webcam, { target: Dashboard })
+        .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+
+      ExpTestImg.on('success', (fileCount) => {
+        console.log(`${fileCount} files uploaded`)
+      })
+    </script>
+
+    <!-- To support older browsers, you can use the legacy bundle which adds a global `ExpTestImg` object.  -->
+    <script
+      nomodule
+      src="https://releases.transloadit.com/ExpTestImg/v3.20.0/ExpTestImg.legacy.min.js"
+    ></script>
+    <script nomodule>
+      {
+        const { Dashboard, Webcam, Tus } = ExpTestImg
+        const ExpTestImg = new ExpTestImg.ExpTestImg({ debug: true, autoProceed: false })
+          .use(Dashboard, { trigger: '#ExpTestImgModalOpener' })
+          .use(Webcam, { target: Dashboard })
+          .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+
+        ExpTestImg.on('success', function (fileCount) {
+          console.log(`${fileCount} files uploaded`)
+        })
+      }
+    </script>
+  </body>
+</html>
