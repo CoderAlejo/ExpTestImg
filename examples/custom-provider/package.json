@@ -1,0 +1,32 @@
+{
+  "name": "@ExpTestImg-example/custom-provider",
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@ExpTestImg/companion-client": "workspace:*",
+    "@ExpTestImg/core": "workspace:*",
+    "@ExpTestImg/dashboard": "workspace:*",
+    "@ExpTestImg/google-drive": "workspace:*",
+    "@ExpTestImg/provider-views": "workspace:*",
+    "@ExpTestImg/tus": "workspace:*",
+    "preact": "^10.5.13"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@ExpTestImg/companion": "workspace:*",
+    "body-parser": "^1.18.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "npm-run-all": "^4.1.2",
+    "vite": "^4.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "npm-run-all --parallel start:server start:client",
+    "start:client": "vite",
+    "start:server": "node server/index.cjs"
+  }
+}
