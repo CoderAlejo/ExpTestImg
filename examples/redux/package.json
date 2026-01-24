@@ -1,0 +1,21 @@
+{
+  "name": "@ExpTestImg-example/redux",
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "@ExpTestImg/core": "workspace:*",
+    "@ExpTestImg/dashboard": "workspace:*",
+    "@ExpTestImg/store-redux": "workspace:*",
+    "@ExpTestImg/tus": "workspace:*",
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "vite"
+  }
+}
