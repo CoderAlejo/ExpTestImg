@@ -1,0 +1,22 @@
+{
+  "name": "@ExpTestImg-example/transloadit-markdown-bin",
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@ExpTestImg/core": "workspace:*",
+    "@ExpTestImg/dashboard": "workspace:*",
+    "@ExpTestImg/drop-target": "workspace:*",
+    "@ExpTestImg/image-editor": "workspace:*",
+    "@ExpTestImg/remote-sources": "workspace:*",
+    "@ExpTestImg/transloadit": "workspace:*",
+    "@ExpTestImg/webcam": "workspace:*",
+    "marked": "^4.0.18"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "vite"
+  }
+}
