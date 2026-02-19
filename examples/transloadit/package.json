@@ -1,0 +1,28 @@
+{
+  "name": "@ExpTestImg-example/transloadit",
+  "version": "0.0.0",
+  "type": "module",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "@ExpTestImg/core": "workspace:*",
+    "@ExpTestImg/dashboard": "workspace:*",
+    "@ExpTestImg/drop-target": "workspace:*",
+    "@ExpTestImg/form": "workspace:*",
+    "@ExpTestImg/image-editor": "workspace:*",
+    "@ExpTestImg/progress-bar": "workspace:*",
+    "@ExpTestImg/remote-sources": "workspace:*",
+    "@ExpTestImg/transloadit": "workspace:*",
+    "@ExpTestImg/webcam": "workspace:*",
+    "express": "^4.16.4",
+    "he": "^1.2.0"
+  },
+  "private": true,
+  "scripts": {
+    "start:server": "node server.js",
+    "start:client": "vite",
+    "start": "npm-run-all --parallel start:server start:client"
+  }
+}
