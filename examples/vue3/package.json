@@ -1,0 +1,23 @@
+{
+  "name": "@ExpTestImg-example/vue3",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050"
+  },
+  "dependencies": {
+    "@ExpTestImg/core": "workspace:*",
+    "@ExpTestImg/dashboard": "workspace:*",
+    "@ExpTestImg/drag-drop": "workspace:*",
+    "@ExpTestImg/progress-bar": "workspace:*",
+    "@ExpTestImg/tus": "workspace:*",
+    "@ExpTestImg/vue": "workspace:*",
+    "vue": "^3.2.33"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.0",
+    "vite": "^4.0.0"
+  }
+}
